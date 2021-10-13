@@ -17,6 +17,7 @@ class CreateTestModelsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('second_name');
             $table->timestamps();
         });
     }

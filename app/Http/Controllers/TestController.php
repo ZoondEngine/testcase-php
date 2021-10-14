@@ -6,9 +6,14 @@ use App\Models\TestModel;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class TestController extends Controller
 {
+    public function calendar() {
+        return Inertia::render('Calendar');
+    }
+
     public function read() {
         TestModel::query()->get()->transform(function($item) {
             return [
